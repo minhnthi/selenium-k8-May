@@ -36,7 +36,7 @@ public class CreateMenu {
                 for (int index = 0; index < arrLength; index++) {
                     System.out.println(arrNumber[index]);
                 }
-            } else {
+            } else if (option == 2 || option == 3) {
                 int min = arrNumber[0];
                 int max = arrNumber[0];
                 for (int index = 0; index < arrLength; index++) {
@@ -48,11 +48,10 @@ public class CreateMenu {
                 }
                 if (option == 2) {
                     System.out.println("The maximum number from array list: \n" + max);
-                } else if ((option == 3)) {
+                } else {
                     System.out.println("The minimum number from array list: \n " + min);
                 }
-            }
-            if (option == 4) {
+            } else if (option == 4) {
                 System.out.println("Please input a number: \n");
                 int number = scanner.nextInt();
                 boolean isFound = false;
@@ -65,8 +64,11 @@ public class CreateMenu {
                 if (!isFound) {
                     System.out.println("Number is not in the list");
                 }
+
+            } else {
+                System.out.println("Please input the correct option!");
             }
-            System.out.println("Please input the correct option!");
+
         }
         System.out.println("See you again");
     }
