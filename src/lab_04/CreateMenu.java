@@ -29,7 +29,9 @@ public class CreateMenu {
             System.out.println("Please select option:");
             int option = scanner.nextInt();
 
-            if (option == 1) {
+            if (option == 0) {
+                isContinuing = false;
+            } else if (option == 1) {
                 System.out.println("All the numbers that we have in the array list:");
                 for (int index = 0; index < arrLength; index++) {
                     System.out.println(arrNumber[index]);
@@ -60,10 +62,11 @@ public class CreateMenu {
                         isFound = true;
                     }
                 }
-                if (isFound == false) {
+                if (!isFound) {
                     System.out.println("Number is not in the list");
                 }
             }
+            System.out.println("Please input the correct option!");
         }
         System.out.println("See you again");
     }
