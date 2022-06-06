@@ -1,11 +1,13 @@
 package lab_06;
 
 public class Lab06_01_Calculator {
-    public int sum(int hrs, int min) {
-        return hrs * 60 + min;
-    }
     public static void main(String[] args) {
-        Lab06_01_Calculator lab61Calculator = new Lab06_01_Calculator();
-        System.out.println(lab61Calculator.sum(2, 5));
+        String myStr= "2hrs and 5 minutes";
+
+        int hrs = Integer.parseInt(myStr.substring(0,1));
+        int minutes = Integer.parseInt(myStr.substring(9,10));
+
+        int total = hrs *60 + minutes;
+        System.out.println(total);
     }
 }
